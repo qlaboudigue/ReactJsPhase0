@@ -16,11 +16,29 @@ console.log(currentYear);
 
 const img = "https://picsum.photos/200";
 
+var message = "";
+var time = new Date().getHours();
+
 const customStyle = {
   color: "green",
   fontSize: "20px",
   border: "1px solid black"
 };
+
+const customStyleTwo = {
+  color: "blue"
+};
+
+if (time < 12) {
+  message = "Good morning";
+  customStyle.color = "red";
+} else if (time < 18) {
+  message = "Good afternoon";
+  customStyle.color = "green";
+} else if (time < 24) {
+  message = "Good evening";
+  customStyle.color = "blue";
+}
 
 customStyle.color = "purple";
 
@@ -33,6 +51,10 @@ ReactDOM.render(
       My Favourite Foods{" "}
     </h1>
     <h1 style={customStyle}> Inline styling </h1>
+    <h1 className="heading" style={customStyleTwo}>
+      {" "}
+      {message}{" "}
+    </h1>
     <ul>
       <li> Bacon </li>
       <li> Jamon </li>
