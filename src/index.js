@@ -16,6 +16,14 @@ console.log(currentYear);
 
 const img = "https://picsum.photos/200";
 
+const customStyle = {
+  color: "green",
+  fontSize: "20px",
+  border: "1px solid black"
+};
+
+customStyle.color = "purple";
+
 ReactDOM.render(
   <div>
     <p> Created by {name} </p>
@@ -24,6 +32,7 @@ ReactDOM.render(
       {" "}
       My Favourite Foods{" "}
     </h1>
+    <h1 style={customStyle}> Inline styling </h1>
     <ul>
       <li> Bacon </li>
       <li> Jamon </li>
