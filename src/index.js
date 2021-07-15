@@ -14,12 +14,22 @@ const name = "Quentin";
 const currentYear = new Date().getFullYear();
 console.log(currentYear);
 
+const img = "https://picsum.photos/200";
+
 ReactDOM.render(
   <div>
     <p> Created by {name} </p>
     <p> Copyright {currentYear} </p>
-    <p> </p>
+    <h1 className="heading" contentEditable="true" spellCheck="false">
+      {" "}
+      My Favourite Foods{" "}
+    </h1>
+    <ul>
+      <li> Bacon </li>
+      <li> Jamon </li>
+      <li> Noodles </li>
+    </ul>
+    <img className="image" src={img} alt="Random" />
   </div>,
-
   document.getElementById("root")
 );
